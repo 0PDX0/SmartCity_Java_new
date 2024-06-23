@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="90dp"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/guide1" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="衡阳市祁东县洪桥镇"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            />
+
+            <!--android:singleLine="true":表示限制单行显示
+                android:lines="2":限制TextView的行数  内容小于限制行数，也会占用最大行数。
+                android:maxLines="2":限制最大行数为2行  内容小于限制行数，只会占用内容需要的行数。
+
+                android:ellipsize="start":文字长度超过textview宽度后显示省略号的位置，
+                android:ellipsize=”start”—–省略号显示在开头 “…lmn”
+                android:ellipsize=”end”——省略号显示在结尾 “abcdec…”
+                android:ellipsize=”middle”—-省略号显示在中间 “ab…lmn”
+                android:ellipsize=”marquee”–跑马灯效果(需要额外处理)
+                -->
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

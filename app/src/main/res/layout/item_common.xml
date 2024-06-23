@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:text="标题"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="恩荣\n恩荣\n恩荣"
+            android:textColor="@color/tv_color"
+            android:background="@color/white"
+            android:lineSpacingExtra="15dp"
+            android:singleLine="false" />
+        <!--android:lineSpacingExtra
+            android:lineSpacingExtra表示额外的行间距数值，单位通常为dp。如android:lineSpacingExtra=”1dp”。
+            android:lineSpacingExtra的值可以为负数，小数和0。如果值为正数表示增加行间距，如果值为负数表示减少行间距，如果值为0，则没有变化。
+
+            android:lineSpacingMultiplier
+            android:lineSpacingMultiplier表示行间距的倍数，没有单位。如android:lineSpacingMultiplier=”1.2”。
+            android:lineSpacingMultiplier的值可以为任意浮点数。如果值大于1.0表示增加行间距，如果值小于1.0表示减少行间距。
+
+            android:lineSpacingExtra和android:lineSpacingMultiplier一起使用
+            android:lineSpacingExtra和android:lineSpacingMultiplier可以在一起对同一个TextView进行设置，同时使用时会先增加android:lineSpacingMultiplier设置的倍数，再加上android:lineSpacingExtra设置的额外的间距。
+
+            setLineSpacing()
+            setLineSpacing()原型为public void setLineSpacing(float add, float mult);
+            参数add表示要增加的间距数值，对应android:lineSpacingExtra参数。
+            参数mult表示要增加的间距倍数，对应android:lineSpacingMultiplier参数。-->
+
+        <!--SingleLine的简单解释：
+            没设置singleLine时，也就是默认false时，文字到达末尾时再输入字符会折行，变成多行。按下回车时，插入新行。
+            设置singleLine后，会限制文本成一行，可横向滚动。当你按下回车键时，会将焦点移向下一个组件。
+
+            SingleLine已被弃用：
+
+            对于静态文本，如TextView，请使用maxLines代替
+            对于可编辑的组件，如EditText，请使用inputType = “textMultiLine” 代替
+            singleLine默认为false，但若设置inputType属性为任意一个值，singleLine的值默认变为true。-->
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

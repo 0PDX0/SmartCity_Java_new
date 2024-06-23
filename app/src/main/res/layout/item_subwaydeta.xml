@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/point"
+        android:layout_marginBottom="10dp"
+        app:tint="@color/theme" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="我想晓"
+        android:lineSpacingExtra="5dp"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:gravity="center" />
+
+
+</LinearLayout>

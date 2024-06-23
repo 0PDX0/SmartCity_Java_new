@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.zhcs"
+        minSdk 28
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+//    implementation fileTree(dir: "libs",include: ["*.jar"])
+//    implementation fileTree(dir: "libs",includes: ["*.aar"])
+
+    /*轮播图banner依赖*/
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    /*导航栏TabLayout依赖*/
+    implementation 'com.google.android.material:material:1.9.0'
+    /*网络请求okhttp*/
+//    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    /*Json转换Gson依赖*/
+    implementation 'com.google.code.gson:gson:2.9.0'
+    /*Glide图片加载*/
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    /*okio*/
+    implementation 'com.squareup.okio:okio:2.8.0'
+
+    implementation files('libs\\retrofit-2.6.3.jar')
+    implementation files('libs\\okhttp-4.9.3.jar')
+//    implementation files('libs\\okio-1.14.0.jar')
+//    implementation files('libs\\gson-2.9.1.jar')
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

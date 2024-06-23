@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.NewsDetailActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/back"
+            android:padding="2dp"
+            android:layout_margin="15dp"
+            android:onClick="back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新闻详细"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="新闻"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:padding="20dp"
+                android:singleLine="false" />
+            <!--没设置singleLine时，也就是默认false时，文字到达末尾时再输入字符会折行，变成多行。按下回车时，插入新行。
+                设置singleLine后，会限制文本成一行，可横向滚动。当你按下回车键时，会将焦点移向下一个组件。
+                SingleLine已被弃用：
+                对于静态文本，如TextView，请使用maxLines代替
+                对于可编辑的组件，如EditText，请使用inputType = “textMultiLine” 代替
+                singleLine默认为false，但若设置inputType属性为任意一个值，singleLine的值默认变为true。
+                实际使用中，如果TextView设置了固定宽高，此时只设置maxLines=1，当内容超出了组件大小，依然会换行显示。
+                配合 ellipsize 使用时，就没问题了：-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F1F1F1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:text="爱心"
+                    android:singleLine="false"
+                    android:lineSpacingExtra="5dp" />
+                <!--android:lineSpacingExtra="5dp"：设置行间距-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123条评论"
+                        android:drawableLeft="@mipmap/comment"
+                        android:drawablePadding="10dp"
+                        android:singleLine="false"
+                        android:maxLines="3"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="2020-1-1"
+                        android:singleLine="false"
+                        android:maxLines="3" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
